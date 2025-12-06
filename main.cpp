@@ -4,6 +4,7 @@
 #include <soup/RecursiveMutex.hpp>
 #include <soup/Thread.hpp>
 #include <soup/SharedPtr.hpp>
+#include <soup/TartarusProKeymap.hpp>
 
 #define LOGGING false
 
@@ -223,6 +224,13 @@ static void discover_devices(bool initial)
 #if LOGGING
 			std::cout << "New device: " << kbd.name << std::endl;
 #endif
+			if(kbd.name=="Razer TartarusPro"){
+				std::filesystem::path path = "TartarusProMap.json";
+				#if LOGGING
+					std::cout << "Trying to find " << path <<"\n";
+				#endif
+				soup::loadTartarusJsonFile(path); //loadJsonToArray
+			};
 			auto spDev = soup::make_shared<Device>(std::move(kbd));
 			if (!initial)
 			{
