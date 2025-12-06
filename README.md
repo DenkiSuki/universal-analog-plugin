@@ -1,3 +1,7 @@
+Original repo [AnalogSense/universal-analog-plugin](https://github.com/AnalogSense/universal-analog-plugin)
+
+I only try to add TartarusPro compability.
+
 # Universal Analog Plugin
 
 A plugin for the [Wooting Analog SDK](https://github.com/WootingKb/wooting-analog-sdk) that makes it support a wider range of keyboards.
@@ -24,6 +28,7 @@ WootingAnalogPlugins/
 - Razer Huntsman V3 Pro<sup>R</sup>
 - Razer Huntsman V3 Pro Mini<sup>R</sup>
 - Razer Huntsman V3 Pro Tenkeyless<sup>R</sup>
+- Razer Huntsman Tartarus Pro<sup>R, Ex</sup>
 - Everything by NuPhy
 - Everything by DrunkDeer
 - Keychron Q1 HE<sup>P, F</sup>
@@ -35,18 +40,21 @@ WootingAnalogPlugins/
 - Madlions MAD68HE<sup>P</sup>
 - Madlions MAD68R<sup>P</sup>
 
-If your keyboard is not mentioned here, take a look at [The List](https://github.com/calamity-inc/universal-analog-plugin/issues/1) for everything that's on my radar. If your keyboard is not on my radar, please let me know!
+If your keyboard is not mentioned here, take a look at [The List on original repo](https://github.com/calamity-inc/universal-analog-plugin/issues/1) for everything that's on my radar. If your keyboard is not on my radar, please let me know!
 
 Wooting devices are also supported, but only with the `universal-analog-plugin-with-wooting-device-support`, in which case it acts as a replacement for the wooting-analog-plugin.
 
-Note that the actual logic for interacting with the devices is in [soup::AnalogueKeyboard](https://github.com/calamity-inc/Soup/blob/senpai/soup/AnalogueKeyboard.cpp).
+Note that the actual logic for interacting with the devices is in [soup::AnalogueKeyboard].
 
 ---
 
 <sup>R</sup> Razer Synapse needs to be installed and running for analogue inputs to be received from this keyboard.
+
+<sup>Ex</sup> Tartarus Pro can use custom mapping by placing TartarusProMap.json in the same place with AnalogSense ASI Plugin, e.g %Cyberpunk2077%/bin/x64/plugins, json filename must be TartarusProMap.json, there is an example/template in this repo. KeyListForJSON.txt contain the string value list, if the json not found by the plugin or there is wrong configuration like wrong config amount, it will fallback to default razer mapping. Please make sure to make sure to make the custom mapping same as your mapping in Synapse3 to prevent it behaving weird. The mapping file only map analog key (01-20), because it's analog plugin :D.
 
 <sup>P</sup> The official firmware only supports polling, which can lead to lag and missed inputs.
 
 <sup>F</sup> [Custom firmware with full analog report functionality is available](https://analogsense.org/firmware/).
 
 <!-- <sup>U</sup> I don't own this keyboard, so I've not had a chance to test it, but it should work. -->
+
