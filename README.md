@@ -1,8 +1,8 @@
-Original repo [AnalogSense/universal-analog-plugin](https://github.com/AnalogSense/universal-analog-plugin)
-
-I only try to add TartarusPro compability.
 
 # Universal Analog Plugin
+
+Original repo [AnalogSense/universal-analog-plugin](https://github.com/AnalogSense/universal-analog-plugin)
+I only try to add TartarusPro compability.
 
 A plugin for the [Wooting Analog SDK](https://github.com/WootingKb/wooting-analog-sdk) that makes it support a wider range of keyboards.
 
@@ -57,4 +57,5 @@ Note that the actual logic for interacting with the devices is in [soup::Analogu
 <sup>F</sup> [Custom firmware with full analog report functionality is available](https://analogsense.org/firmware/).
 
 <!-- <sup>U</sup> I don't own this keyboard, so I've not had a chance to test it, but it should work. -->
+
 
